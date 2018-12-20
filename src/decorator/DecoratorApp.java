@@ -1,5 +1,5 @@
 package decorator;
-/**
+/*
  *
  * @author KonovalovVA
  */
@@ -14,16 +14,6 @@ interface PrinterInteface {
     void print();
 }
 
-abstract class Decorator implements PrinterInteface {
-    PrinterInteface component;
-    public Decorator(PrinterInteface component) {
-        this.component = component;
-    }
-    public void print() {
-        component.print();
-    }
-}
-
 class Printer implements PrinterInteface {
     String value;
     public Printer(String value) {
@@ -32,6 +22,16 @@ class Printer implements PrinterInteface {
     public void print() {
         System.out.print(value);
     } 
+}
+
+abstract class Decorator implements PrinterInteface {
+    PrinterInteface component;
+    public Decorator(PrinterInteface component) {
+        this.component = component;
+    }
+    public void print() {
+        component.print();
+    }
 }
 
 class LeftBreakerDecorator extends Decorator {
@@ -45,7 +45,6 @@ class LeftBreakerDecorator extends Decorator {
 }
 
 class RightBreakerDecorator extends Decorator {
-
     public RightBreakerDecorator(PrinterInteface component) {
         super(component);
     }
