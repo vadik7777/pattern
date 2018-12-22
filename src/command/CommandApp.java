@@ -33,26 +33,27 @@ class Invoker{
         reset.execute();
     }
 }
-interface Command {
-    void execute();
-}
-class ConcreteStart implements Command{
+abstract class Command{
     Receiver receiver;
-    public ConcreteStart(Receiver receiver){this.receiver = receiver;}
+    public Command(Receiver receiver){
+        this.receiver = receiver;
+    }
+    abstract void execute();
+}
+class ConcreteStart extends Command{
+    public ConcreteStart(Receiver receiver){super(receiver);}
     public void execute() {
         receiver.start();
     }
 }
-class ConcreteStop implements Command{
-    Receiver receiver;
-    public ConcreteStop(Receiver receiver){this.receiver = receiver;}
+class ConcreteStop extends Command{
+    public ConcreteStop(Receiver receiver){super(receiver);}
     public void execute() {
         receiver.stop();
     }
 }
-class ConcreteReset implements Command{
-    Receiver receiver;
-    public ConcreteReset(Receiver receiver){this.receiver = receiver;}
+class ConcreteReset extends Command{
+    public ConcreteReset(Receiver receiver){super(receiver);}
     public void execute() {
         receiver.reset();
     }
