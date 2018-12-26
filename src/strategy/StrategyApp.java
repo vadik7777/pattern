@@ -15,11 +15,13 @@ public class StrategyApp {
         client.setStrategy(strategy);
         client.performOperation();
         
-        strategy = new BubleSortStrategy(arr);
+        int arr1[]={3,1,5,9,7};
+        strategy = new BubleSortStrategy(arr1);
         client.setStrategy(strategy);
         client.performOperation();
         
-        strategy = new InsertSortStrategy(arr);
+        int arr2[]={3,1,5,9,7};
+        strategy = new InsertSortStrategy(arr2);
         client.setStrategy(strategy);
         client.performOperation();
     }
