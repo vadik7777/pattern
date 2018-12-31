@@ -18,13 +18,11 @@ class ServiceLocator {
     private ServiceLocator(){}
     private static final Object sync = new Object();
     private static volatile ServiceLocator instance;
-    private static InitialContext context;
     public static ServiceLocator getInstance() {
         if (instance == null) {
             synchronized (sync) {
                 if (instance == null) {
                     instance = new ServiceLocator();
-                    context = new InitialContext();
                 }
             }
         }
