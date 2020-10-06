@@ -38,6 +38,7 @@ public class CompositeApp {
         composite1.addComponent(circle2);
         composite1.addComponent(circle3);
 
+        composite.addComponent(square1);
         composite.addComponent(composite1);
         composite.addComponent(composite2);
 
