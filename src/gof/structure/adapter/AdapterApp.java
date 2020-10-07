@@ -1,4 +1,4 @@
-package adapter;
+package gof.structure.adapter;
 /**
  *
  * @author KonovalovVA

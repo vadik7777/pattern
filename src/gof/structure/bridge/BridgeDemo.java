@@ -1,4 +1,4 @@
-package bridge;
+package gof.structure.bridge;
 
 public class BridgeDemo {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package creational.factoryMethod;
+package gof.creational.factoryMethod;
 
 import java.util.Date;
 

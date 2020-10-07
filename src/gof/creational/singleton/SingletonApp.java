@@ -1,4 +1,4 @@
-package creational.singleton;
+package gof.creational.singleton;
 /**
  *
  * @author KonovalovVA

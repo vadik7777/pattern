@@ -1,4 +1,4 @@
-package proxy;
+package gof.structure.proxy;
 /**
  *
  * @author Вадик
