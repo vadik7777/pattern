@@ -55,7 +55,6 @@ class ConcreteIterator implements Iterator<Integer> {
         this.integerList = integerList;
     }
 
-
     @Override
     public Integer next() {
         return integerList.get(cursor++);
