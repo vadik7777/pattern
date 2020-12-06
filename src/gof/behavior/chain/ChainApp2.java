@@ -1,10 +1,10 @@
-package chain;
+package gof.behavior.chain;
 
 /**
  *
  * @author Вадик
  */
-public class ChainApp {
+public class ChainApp2 {
 
     public static void main(String[] args) {
         Logger info = new ConcreteInfo(Level.INFO);
