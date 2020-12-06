@@ -6,32 +6,39 @@ package gof.behavior.state;
 public class StateApp {
     public static void main(String[] args) {
         Context context = new Context();
-        context.setCurrentState(new ConcreteStateA());
-        context.someMethod();
-        context.setCurrentState(new ConcreteStateB());
-        context.someMethod();
-
+        context.changeState();
+        context.changeState();
     }
 }
-class Context{
+class Context {
+    Context() {
+        currentState = new ConcreteStateA();
+    }
     private State currentState;
+
     public void setCurrentState(State currentState) {
         this.currentState = currentState;
     }
-    public void someMethod() {
-        currentState.someMethod();
+    public void changeState() {
+        currentState.someMethod(this);
     }
 }
 interface State {
-    void someMethod();
+    void someMethod(Context context);
 }
 class ConcreteStateA implements State {
-    public void someMethod() {
-        System.out.println("In state A");
+    ConcreteStateA() {
+        System.out.println("ConcreteStateA");
+    }
+    public void someMethod(Context context) {
+        context.setCurrentState(new ConcreteStateB());
     }
 }
 class ConcreteStateB implements State {
-    public void someMethod() {
-        System.out.println("In state B");
+    ConcreteStateB() {
+        System.out.println("ConcreteStateB");
+    }
+    public void someMethod(Context context) {
+        context.setCurrentState(new ConcreteStateA());
     }
 }
