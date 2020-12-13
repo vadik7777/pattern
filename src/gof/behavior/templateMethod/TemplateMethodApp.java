@@ -1,9 +1,9 @@
-package templateMethod;
+package gof.behavior.templateMethod;
 /**
  *
  * @author KonovalovVA
  */
-public class templateMethodApp {
+public class TemplateMethodApp {
     public static void main(String[] args) {
         AbstractClass concreteClass = new ConcreteClass();
         concreteClass.templateMethod();
